@@ -1,0 +1,18 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sBlockNodePort
+metadata:
+  name: blocknodeport
+spec:
+  enforcementAction: deny
+  match:
+    excludedNamespaces: []
+    kinds:
+      - apiGroups:
+          - '*'
+    labelSelector:
+      matchExpressions: []
+    namespaceSelector:
+      matchExpressions: []
+    scope: '*'
+  parameters: {}
+type: constraints.gatekeeper.sh.k8sblocknodeport
