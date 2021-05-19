@@ -2364,7 +2364,7 @@ metadata:
   name: argocd-ssh-known-hosts-cm
 ---
 apiVersion: v1
-data: null
+data:
 kind: ConfigMap
 metadata:
   labels:
